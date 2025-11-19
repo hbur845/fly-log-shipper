@@ -1,15 +1,3 @@
-app = "fly-log-shipper"
-primary_region = "syd"
-
-[build]
-  image = "ghcr.io/fly-apps/log-shipper:latest"
-
 [[services]]
   http_checks = []
   internal_port = 8686
-  processes = ["app"]
-
-[[vm]]
-  cpus = 1
-  cpu_kind = "shared"
-  memory = "256mb"
